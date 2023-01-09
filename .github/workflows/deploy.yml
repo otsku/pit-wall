@@ -12,7 +12,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ https://otsku.github.io/pit-wall/ }}
+      url: https://otsku.github.io/pit-wall/
     runs-on: ubuntu-latest
     steps:
     - id: build-publish
