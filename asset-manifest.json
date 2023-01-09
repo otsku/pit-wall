@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/pit-wall/static/css/main.073c9b0a.css",
+    "main.js": "/pit-wall/static/js/main.3f7c5fbc.js",
+    "static/js/787.d3c5f7fb.chunk.js": "/pit-wall/static/js/787.d3c5f7fb.chunk.js",
+    "static/media/logo.svg": "/pit-wall/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/pit-wall/index.html",
+    "main.073c9b0a.css.map": "/pit-wall/static/css/main.073c9b0a.css.map",
+    "main.3f7c5fbc.js.map": "/pit-wall/static/js/main.3f7c5fbc.js.map",
+    "787.d3c5f7fb.chunk.js.map": "/pit-wall/static/js/787.d3c5f7fb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.3f7c5fbc.js"
+  ]
+}
