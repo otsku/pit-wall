@@ -1,5 +1,5 @@
-import Functions from "./functions.js";
-import Form from "./form.js";
+import Functions from "../functions.js";
+import Form from "../form/form.js";
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
