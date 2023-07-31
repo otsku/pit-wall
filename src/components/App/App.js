@@ -1,10 +1,20 @@
-import Functions from "../functions.js";
 import Form from "../form/form.js";
-import React, { useEffect, useState } from "react";
+import Table from "../visualisation/table.js";
+import Charts from "../visualisation/charts.js";
+import React, { useState } from "react";
 import "./App.css";
 
-function App() {
-  return <div>{Form()}</div>;
-}
+const App = () => {
+  const [formData, setFormData] = useState("");
+
+  return (
+    <div className="component-app">
+      <h1 className="white-text"> Pit Wall </h1>
+      <Form setFormData={setFormData} />
+      <Table formData={formData} />
+      <Charts formData={formData} />
+    </div>
+  );
+};
 
 export default App;
