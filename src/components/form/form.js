@@ -84,6 +84,7 @@ const Form = ({ setFormData }) => {
               type="text"
               value={attackFuelLap}
               onChange={(e) => setAttackFuelLap(e.target.value)}
+              disabled
             />
           </td>
         </tr>
@@ -125,6 +126,7 @@ const Form = ({ setFormData }) => {
               type="text"
               value={attackLapTime}
               onChange={(e) => setAttackLapTime(e.target.value)}
+              disabled
             />
           </td>
         </tr>
@@ -145,6 +147,7 @@ const Form = ({ setFormData }) => {
               type="text"
               value={normalTyreLife}
               onChange={(e) => setNormalTyreLife(e.target.value)}
+              disabled
             />
           </td>
         </tr>
@@ -155,6 +158,7 @@ const Form = ({ setFormData }) => {
               type="text"
               value={attackTyreLife}
               onChange={(e) => setAttackTyreLife(e.target.value)}
+              disabled
             />
           </td>
         </tr>
