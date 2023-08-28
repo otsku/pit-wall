@@ -5,6 +5,7 @@ import {
   getRefuels,
   getPitTime,
   getMaxStint,
+  getRaceDuration,
 } from "../functions.js";
 
 const Table = ({ formData }) => {
@@ -28,6 +29,12 @@ const Table = ({ formData }) => {
       <tr>
         <td>Race Lenght</td>
         <td>{getRaceLength(formData)} Km</td>
+      </tr>
+      <tr>
+        <td>Race Duration</td>
+        <td>
+          {getRaceDuration(formData)[0]}:{getRaceDuration(formData)[1]} min:sec
+        </td>
       </tr>
       <tr>
         <td>Race Fuel Consuption</td>

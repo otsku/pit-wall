@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from "react";
+import {
+  handleLapTime,
+  lapTimeToSeconds,
+  lapTimeFromSeconds,
+} from "../functions.js";
 
 const Form = ({ setFormData }) => {
   const [trackName, setTrackName] = useState("");
@@ -9,6 +14,8 @@ const Form = ({ setFormData }) => {
   const [fuelLoadMax, setFuelLoadMax] = useState("");
   const [fuelStart, setFuelStart] = useState("");
   const [normalLapTime, setNormalLapTime] = useState("");
+  const [normalMinutes, setNormalMinutes] = useState(0);
+  const [normalSeconds, setNormalSeconds] = useState(0);
   const [attackLapTime, setAttackLapTime] = useState("");
   const [normalTyreLife, setNormalTyreLife] = useState("");
   const [attackTyreLife, setAttackTyreLife] = useState("");
@@ -33,6 +40,13 @@ const Form = ({ setFormData }) => {
     };
     setFormData(newVal);
   };
+
+  useEffect(() => {
+    let array = handleLapTime(normalMinutes, normalSeconds);
+    setNormalMinutes(array[0]);
+    setNormalSeconds(array[1]);
+    setNormalLapTime(array);
+  }, [normalMinutes, normalSeconds]);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -113,10 +127,17 @@ const Form = ({ setFormData }) => {
           <td>Normal laptime:</td>
           <td>
             <input
-              type="text"
-              value={normalLapTime}
-              onChange={(e) => setNormalLapTime(e.target.value)}
+              type="number"
+              value={normalMinutes}
+              onChange={(e) => setNormalMinutes(e.target.value)}
             />
+            minutes
+            <input
+              type="number"
+              value={normalSeconds}
+              onChange={(e) => setNormalSeconds(e.target.value)}
+            />
+            seconds
           </td>
         </tr>
         <tr>
